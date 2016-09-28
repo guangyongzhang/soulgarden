@@ -1,3 +1,3 @@
 # soulgarden
 Hi dear daughter!
-I love your!
+I love you!
