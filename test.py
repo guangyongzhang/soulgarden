@@ -32,12 +32,27 @@ for curr_row in range(num_rows):
     arr.append(jsonRow)
     
 
+# define a json dictionary
 jsonData= json.dumps(arr,sort_keys=True,indent=4)
 print(jsonData)
 
-# define a dictionary
-# Calculate Region 1-11 , 12-22,23-33 and Append  to dictionary
-# Caluclate Average Data of region in history(1,2,3)
+for curr_item in len(item_dict['jsonData']):
+    # Calculate Region 1-11 , 12-22,23-33 and Append  to dictionary
+    region1, region2, region3 = 0
+    for curr_field in 6:
+        if(jsonData[curr_item][curr_field] <= 11):
+         region1++
+        elif(11<jsonData[curr_item][curr_field] <= 22):
+         region2++
+        else :
+         region3++
+     
+    jsonData[curr_item] = 
+    
+    
+    
+    
+    # Caluclate Average Data of region in history(1,2,3)
 
 # Calculate  length of last number in vertical(Maximum space)
 # Given 20 record with same range
