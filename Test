@@ -1,0 +1,45 @@
+import json
+
+json_data = """
+[
+  {
+    "description": "Lisa's Nexus 5",
+    "mdnsName": "Lisa's Nexus 5",
+    "dhcpHostname": "LisaNexus5",
+    "usage": {"sent": 1437, "recv": 8331},
+    "mac": "00:18:D2:AD:B3:3G",
+    "ip": "1.2.3.4",
+    "id": "lk12uq"
+  }
+]
+"""
+
+print(json_data)
+print('------------------------')
+
+clients_json = json.loads(json_data)
+
+for clientEntry in clients_json:
+    mdnsName = clientEntry['mdnsName']
+    deviceDesc = clientEntry['description']
+    dhcpHostName = clientEntry['dhcpHostname']
+    clientMac = clientEntry['mac']
+    Id = clientEntry['id']
+    Ip = clientEntry['ip']
+    usageRecv = clientEntry['usage']['recv']
+    usageSent = clientEntry['usage']['sent']
+    #TODO: Get this is UTC format
+    InsertDate = '10/24/2017'
+
+    print('mdnsName:', mdnsName)
+    print('deviceDesc:', deviceDesc)
+    print('dhcpHostName:', dhcpHostName)
+    print('clientMac:', clientMac)
+    print('Id:', Id)
+    print('Ip:', Ip)
+    print('usageRecv:', usageRecv)
+    print('usageSent:', usageSent)
+    print('InsertDate:', InsertDate)
+    print('------------------------')
+[DEBUG ON]
+>>> 
