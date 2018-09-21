@@ -52,3 +52,23 @@ json_map["Some string"] = value
 json_map["Some int"] = value2
 json_map["Some bool"] = value3
 result = json.dumps(json_map)
+
+
+import json
+line_items=[]
+for q in ItemDetails:
+    myItemName = q[0]
+    myQuantity = q[1]
+    myUnitAmount = float(q[2])
+    myItemCode = str(q[3])
+
+    myjson3 = {
+                'ItemCode': myItemCode,
+                'Description': myItemName,
+                'UnitAmount': myUnitAmount * myDiscount,
+                'Quantity': myQuantity,
+                'AccountCode': myAccountCode,
+                'TaxType': myTaxType
+            }
+    line_items.append(myjson3)
+print(json.dumps(line_items))
