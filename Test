@@ -43,3 +43,12 @@ for clientEntry in clients_json:
     print('------------------------')
 [DEBUG ON]
 >>> 
+
+value = "String" # String
+value2 = 0 # Integer
+value3 = True # Boolean
+json_map = {}
+json_map["Some string"] = value
+json_map["Some int"] = value2
+json_map["Some bool"] = value3
+result = json.dumps(json_map)
